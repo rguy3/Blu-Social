@@ -33,7 +33,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l0i-FR-LAv">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l0i-FR-LAv" customClass="FancyView" customModule="Blu_Social" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UTJ-B0-UKU">
@@ -77,7 +77,7 @@
                                 <color key="textColor" white="0.6575875435556684" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GmD-Nc-HVu">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GmD-Nc-HVu" customClass="FancyText" customModule="Blu_Social" customModuleProvider="target">
                                 <rect key="frame" x="42" y="313" width="291" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="B2g-gL-csd"/>
@@ -86,7 +86,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MQX-ap-Ia9">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MQX-ap-Ia9" customClass="FancyText" customModule="Blu_Social" customModuleProvider="target">
                                 <rect key="frame" x="42" y="354" width="291" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="aU7-gx-sIE"/>
@@ -102,7 +102,7 @@
                                     <constraint firstAttribute="height" constant="1" id="oeA-RV-WiO"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXF-97-uOK">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXF-97-uOK" customClass="RoundBtn" customModule="Blu_Social" customModuleProvider="target">
                                 <rect key="frame" x="254" y="412" width="83" height="35"/>
                                 <color key="backgroundColor" red="0.27058823529999998" green="0.3803921569" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
