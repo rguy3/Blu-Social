@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3030EC001E2D6BB500E99FBF /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3030EBFF1E2D6BB500E99FBF /* FeedVC.swift */; };
 		305C20E81E25B70A00FF1162 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305C20E71E25B70A00FF1162 /* AppDelegate.swift */; };
 		305C20EA1E25B70A00FF1162 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305C20E91E25B70A00FF1162 /* SignInVC.swift */; };
 		305C20ED1E25B70A00FF1162 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 305C20EB1E25B70A00FF1162 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		125C09F48A322B684F593CE3 /* Pods_Blu_Social.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blu_Social.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3030EBFF1E2D6BB500E99FBF /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		305C20E41E25B70A00FF1162 /* Blu Social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blu Social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		305C20E71E25B70A00FF1162 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		305C20E91E25B70A00FF1162 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				305C20E91E25B70A00FF1162 /* SignInVC.swift */,
+				3030EBFF1E2D6BB500E99FBF /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				305C20EA1E25B70A00FF1162 /* SignInVC.swift in Sources */,
+				3030EC001E2D6BB500E99FBF /* FeedVC.swift in Sources */,
 				305C21041E2B42B200FF1162 /* RoundBtn.swift in Sources */,
 				305C20E81E25B70A00FF1162 /* AppDelegate.swift in Sources */,
 				305C20FF1E2B3C8800FF1162 /* FancyView.swift in Sources */,

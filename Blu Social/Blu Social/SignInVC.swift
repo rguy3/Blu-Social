@@ -11,6 +11,7 @@ import FacebookCore
 import FacebookLogin
 import FirebaseAuth
 import Firebase
+import SwiftKeychainWrapper
 
 class SignInVC: UIViewController {
     
@@ -19,19 +20,26 @@ class SignInVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        //Cannot perform segues
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) { //If the key exists
+            performSegue(withIdentifier: "goToFeed", sender: nil)
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
     @IBAction func signInTapped(_ sender: Any) {
         if let email = emailTextfield.text, let password = passwordTextfield.text {
             FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
                 if error == nil {
                     print("RICH: Email User authenticated with Firebase")
+                    if let user = user {
+                        self.completeSignIn(id: user.uid)
+                    }
                 } else {
                     print("RICH: User doesn't exists")
                     FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
@@ -39,6 +47,9 @@ class SignInVC: UIViewController {
                             print("RICH: Unable to create user with Firebase. Email possibly exists.")
                         } else {
                             print("RICH: Successfully created Email user with Firebase")
+                            if let user = user {
+                               self.completeSignIn(id: user.uid)
+                            }
                         }
                     })
                 }
@@ -62,6 +73,7 @@ class SignInVC: UIViewController {
                 self.firebaseAuth(credential) //Calls firebase function to pass in credentials
                 //You can also simply pass the credentials by uncommeting this code
                 //FIRFacebookAuthProvider.credential(withAccessToken: credential)
+                
             }
         }
     }
@@ -72,8 +84,18 @@ class SignInVC: UIViewController {
                 print("RICH: We got an error. - \(error)")
             } else {
                 print("Firebase Authentication Successful!")
+                if let user = user { //Auto sign-in using Swift KeychainWrapper
+                     self.completeSignIn(id: user.uid)
+                    
+                }
             }
         })
+    }
+    
+    func completeSignIn(id: String) { //Saves sign-in credentials
+        let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)  //Saves the Key for the device's ID
+        print("RICH: Data saved to keychain \(keychainResult)")
+        self.performSegue(withIdentifier: "goToFeed", sender: nil)
     }
 
 }

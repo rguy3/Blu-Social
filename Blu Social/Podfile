@@ -10,6 +10,7 @@ target 'Blu Social' do
   pod 'FacebookLogin'
   pod 'FacebookShare'
   pod 'FBSDKCoreKit'
+  pod 'SwiftKeychainWrapper'
   # Pods for Blu Social
 
 end
