@@ -24,6 +24,7 @@ class FeedVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
     @IBAction func signOutPressed(_ sender: Any) {
         KeychainWrapper.standard.removeObject(forKey: KEY_UID) //removes KEYUID
         try! FIRAuth.auth()?.signOut() //Signs out of firebase
