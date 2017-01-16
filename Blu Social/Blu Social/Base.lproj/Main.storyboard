@@ -32,6 +32,9 @@
                                 <state key="normal" title="        Sign in with Facebook" backgroundImage="fb">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="facebookSignInPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H0y-Wf-IDE"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l0i-FR-LAv" customClass="FancyView" customModule="Blu_Social" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
@@ -93,7 +96,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nkV-XB-UDT">
                                 <rect key="frame" x="42" y="353" width="291" height="1"/>
@@ -117,6 +120,9 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gRO-5P-pkt"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you haven't signed in before, ana ccount will be automatically created for you." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vMX-d4-7bL">
                                 <rect key="frame" x="16" y="562" width="343" height="85"/>
@@ -155,6 +161,10 @@
                             <constraint firstAttribute="trailing" secondItem="l0i-FR-LAv" secondAttribute="trailing" id="x7T-ED-dsY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextfield" destination="GmD-Nc-HVu" id="ihs-cR-ga6"/>
+                        <outlet property="passwordTextfield" destination="MQX-ap-Ia9" id="Dfu-Mw-Vbs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
