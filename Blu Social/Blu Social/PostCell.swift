@@ -15,6 +15,8 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var postImg: UIImageView!
     @IBOutlet weak var postDesc: UITextView!
     @IBOutlet weak var postLikes: UILabel!
+    
+    var post: Post!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,5 +26,10 @@ class PostCell: UITableViewCell {
     @IBAction func likePost(_ sender: Any) {
     }
     
+    func configureCell(post: Post) {
+        self.post = post
+        self.postDesc.text = post.description
+        self.postLikes.text = "\(post.likes)"
+    }
 
 }

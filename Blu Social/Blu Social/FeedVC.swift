@@ -51,17 +51,14 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("RICH: \(posts[indexPath.row].description)")
-        return tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
-        
-//        let post = posts[indexPath.row]
-//        if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
-//            cell.postDesc.text = post.description
-//            cell.postLikes.text = "\(post.likes)"
-//            return cell
-//        } else {
-//            
-//        }
+        //print("RICH: \(posts[indexPath.row].description)")
+        let post = posts[indexPath.row]
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
+            cell.configureCell(post: post)
+            return cell
+        } else {
+            return PostCell()
+        }
     }
     
     
