@@ -23,6 +23,7 @@
 		30DBFD1D1E2DA0A10073FD9A /* SubNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DBFD1C1E2DA0A10073FD9A /* SubNavView.swift */; };
 		30DBFD1F1E2DA8F50073FD9A /* ProfilePic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DBFD1E1E2DA8F50073FD9A /* ProfilePic.swift */; };
 		30DBFD221E2DBF610073FD9A /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DBFD211E2DBF610073FD9A /* DataService.swift */; };
+		30DBFD241E2DD3210073FD9A /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DBFD231E2DD3210073FD9A /* Post.swift */; };
 		91F8D1084EAA450EFAB3BCB5 /* Pods_Blu_Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 125C09F48A322B684F593CE3 /* Pods_Blu_Social.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		30DBFD1C1E2DA0A10073FD9A /* SubNavView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubNavView.swift; sourceTree = "<group>"; };
 		30DBFD1E1E2DA8F50073FD9A /* ProfilePic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePic.swift; sourceTree = "<group>"; };
 		30DBFD211E2DBF610073FD9A /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		30DBFD231E2DD3210073FD9A /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		559D5A6B9A742BB96FFA5916 /* Pods-Blu Social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blu Social.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blu Social/Pods-Blu Social.debug.xcconfig"; sourceTree = "<group>"; };
 		878C7010F298B68EFB99D39A /* Pods-Blu Social.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blu Social.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blu Social/Pods-Blu Social.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +112,7 @@
 		305C20FB1E25BEA200FF1162 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				30DBFD231E2DD3210073FD9A /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				3030EC001E2D6BB500E99FBF /* FeedVC.swift in Sources */,
 				30DBFD221E2DBF610073FD9A /* DataService.swift in Sources */,
 				305C21041E2B42B200FF1162 /* RoundBtn.swift in Sources */,
+				30DBFD241E2DD3210073FD9A /* Post.swift in Sources */,
 				305C20E81E25B70A00FF1162 /* AppDelegate.swift in Sources */,
 				305C20FF1E2B3C8800FF1162 /* FancyView.swift in Sources */,
 				30DBFD1F1E2DA8F50073FD9A /* ProfilePic.swift in Sources */,
