@@ -16,6 +16,7 @@ let BASE_URL = FIRDatabase.database().reference()
 class DataService {
     
     static let ds = DataService()
+    
     private var _REF_BASE = BASE_URL
     private var _REF_POSTS = BASE_URL.child("posts")
     private var _REF_USERS = BASE_URL.child("users")
