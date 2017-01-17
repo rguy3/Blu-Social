@@ -12,17 +12,24 @@ import FirebaseAuth
 import FirebaseDatabase
 import SwiftKeychainWrapper
 
-class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var feedView: UITableView!
+    @IBOutlet weak var cameraButton: UIButton!
     
     var posts = [Post]()
+    var imagePicker: UIImagePickerController!
+    var selectedImage: UIImage?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         feedView.delegate = self
         feedView.dataSource = self
+        
+        imagePicker = UIImagePickerController()
+        imagePicker.allowsEditing = true //allows to crop/edit images
+        imagePicker.delegate = self
         
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in //Observes all the "posts" object in Firebase
             //print("RICH: Here are the Data Services under POSTS \(snapshot.value)")
@@ -71,6 +78,19 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBAction func refreshPressed(_ sender: Any) {
         self.loadView()
+    }
+    
+    
+    @IBAction func cameraBtnPressed(_ sender: Any) {
+        
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) { //For camera. Gets rid of controller after picking image
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+            selectedImage = image
+        }
+        imagePicker.dismiss(animated: true, completion: nil)
     }
 
 }

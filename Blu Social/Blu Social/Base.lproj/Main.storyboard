@@ -241,6 +241,9 @@
                                                     <constraint firstAttribute="height" constant="30" id="SDW-Os-WZ5"/>
                                                 </constraints>
                                                 <state key="normal" image="photo"/>
+                                                <connections>
+                                                    <action selector="cameraBtnPressed:" destination="Q3H-lK-yR0" eventType="touchUpInside" id="kL4-Jo-end"/>
+                                                </connections>
                                             </button>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ur-kt-Fsn">
                                                 <rect key="frame" x="40" y="0.0" width="259" height="30"/>
@@ -440,6 +443,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cameraButton" destination="ChF-ra-KE5" id="GFs-K6-HhO"/>
                         <outlet property="feedView" destination="6Ic-As-vMV" id="ch2-Rj-9vN"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="qdQ-7f-FYP"/>
                     </connections>
