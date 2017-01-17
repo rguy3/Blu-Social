@@ -18,6 +18,10 @@
 		305C21021E2B3D2A00FF1162 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305C21011E2B3D2A00FF1162 /* Constants.swift */; };
 		305C21041E2B42B200FF1162 /* RoundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305C21031E2B42B200FF1162 /* RoundBtn.swift */; };
 		305C21061E2B447F00FF1162 /* FancyText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305C21051E2B447F00FF1162 /* FancyText.swift */; };
+		30DBFD191E2D893B0073FD9A /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DBFD181E2D893B0073FD9A /* PostCell.swift */; };
+		30DBFD1B1E2D9DE20073FD9A /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DBFD1A1E2D9DE20073FD9A /* BackgroundView.swift */; };
+		30DBFD1D1E2DA0A10073FD9A /* SubNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DBFD1C1E2DA0A10073FD9A /* SubNavView.swift */; };
+		30DBFD1F1E2DA8F50073FD9A /* ProfilePic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DBFD1E1E2DA8F50073FD9A /* ProfilePic.swift */; };
 		91F8D1084EAA450EFAB3BCB5 /* Pods_Blu_Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 125C09F48A322B684F593CE3 /* Pods_Blu_Social.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +40,10 @@
 		305C21011E2B3D2A00FF1162 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		305C21031E2B42B200FF1162 /* RoundBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
 		305C21051E2B447F00FF1162 /* FancyText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyText.swift; sourceTree = "<group>"; };
+		30DBFD181E2D893B0073FD9A /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		30DBFD1A1E2D9DE20073FD9A /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		30DBFD1C1E2DA0A10073FD9A /* SubNavView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubNavView.swift; sourceTree = "<group>"; };
+		30DBFD1E1E2DA8F50073FD9A /* ProfilePic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePic.swift; sourceTree = "<group>"; };
 		559D5A6B9A742BB96FFA5916 /* Pods-Blu Social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blu Social.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blu Social/Pods-Blu Social.debug.xcconfig"; sourceTree = "<group>"; };
 		878C7010F298B68EFB99D39A /* Pods-Blu Social.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blu Social.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blu Social/Pods-Blu Social.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +117,10 @@
 				305C20FE1E2B3C8800FF1162 /* FancyView.swift */,
 				305C21031E2B42B200FF1162 /* RoundBtn.swift */,
 				305C21051E2B447F00FF1162 /* FancyText.swift */,
+				30DBFD181E2D893B0073FD9A /* PostCell.swift */,
+				30DBFD1A1E2D9DE20073FD9A /* BackgroundView.swift */,
+				30DBFD1C1E2DA0A10073FD9A /* SubNavView.swift */,
+				30DBFD1E1E2DA8F50073FD9A /* ProfilePic.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -263,13 +275,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30DBFD1B1E2D9DE20073FD9A /* BackgroundView.swift in Sources */,
 				305C20EA1E25B70A00FF1162 /* SignInVC.swift in Sources */,
 				3030EC001E2D6BB500E99FBF /* FeedVC.swift in Sources */,
 				305C21041E2B42B200FF1162 /* RoundBtn.swift in Sources */,
 				305C20E81E25B70A00FF1162 /* AppDelegate.swift in Sources */,
 				305C20FF1E2B3C8800FF1162 /* FancyView.swift in Sources */,
+				30DBFD1F1E2DA8F50073FD9A /* ProfilePic.swift in Sources */,
 				305C21061E2B447F00FF1162 /* FancyText.swift in Sources */,
+				30DBFD1D1E2DA0A10073FD9A /* SubNavView.swift in Sources */,
 				305C21021E2B3D2A00FF1162 /* Constants.swift in Sources */,
+				30DBFD191E2D893B0073FD9A /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
