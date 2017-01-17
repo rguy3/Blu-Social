@@ -38,7 +38,8 @@ class SignInVC: UIViewController {
                 if error == nil {
                     print("RICH: Email User authenticated with Firebase")
                     if let user = user {
-                        self.completeSignIn(id: user.uid)
+                        let userData = ["provider": user.providerID]
+                        self.completeSignIn(id: user.uid, userData: userData)
                     }
                 } else {
                     print("RICH: User doesn't exists")
@@ -48,7 +49,8 @@ class SignInVC: UIViewController {
                         } else {
                             print("RICH: Successfully created Email user with Firebase")
                             if let user = user {
-                               self.completeSignIn(id: user.uid)
+                                let userData = ["provider": user.providerID]
+                               self.completeSignIn(id: user.uid, userData: userData)
                             }
                         }
                     })
@@ -85,14 +87,16 @@ class SignInVC: UIViewController {
             } else {
                 print("Firebase Authentication Successful!")
                 if let user = user { //Auto sign-in using Swift KeychainWrapper
-                     self.completeSignIn(id: user.uid)
+                    let userData = ["provider": credential.provider]
+                     self.completeSignIn(id: user.uid, userData: userData)
                     
                 }
             }
         })
     }
     
-    func completeSignIn(id: String) { //Saves sign-in credentials
+    func completeSignIn(id: String, userData: Dictionary<String, String>) { //Saves sign-in credentials
+        DataService.ds.createFirbaseDBUser(uid: id, userData: userData)
         let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)  //Saves the Key for the device's ID
         print("RICH: Data saved to keychain \(keychainResult)")
         self.performSegue(withIdentifier: "goToFeed", sender: nil)
