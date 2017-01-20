@@ -195,17 +195,6 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Obn-fG-MyT">
-                                        <rect key="frame" x="12" y="23" width="25" height="25"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="25" id="Ife-mX-ofB"/>
-                                            <constraint firstAttribute="height" constant="25" id="Qe8-EX-kps"/>
-                                        </constraints>
-                                        <state key="normal" image="reload"/>
-                                        <connections>
-                                            <action selector="refreshPressed:" destination="Q3H-lK-yR0" eventType="touchUpInside" id="zWA-5f-Nej"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="REK-VW-mMN">
                                         <rect key="frame" x="311" y="19" width="56" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -216,14 +205,22 @@
                                             <action selector="signOutPressed:" destination="Q3H-lK-yR0" eventType="touchUpInside" id="DGw-sh-WEe"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="96b-KV-nUq">
+                                        <rect key="frame" x="8" y="7" width="45" height="45"/>
+                                        <color key="backgroundColor" red="0.30190425300000001" green="0.62283772800000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="Tqm-wE-ZlV"/>
+                                            <constraint firstAttribute="width" constant="45" id="cfP-CH-j9l"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.30190425300000001" green="0.62283772800000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="FJX-FM-tlX"/>
+                                    <constraint firstItem="96b-KV-nUq" firstAttribute="leading" secondItem="r4t-Vw-KRC" secondAttribute="leading" constant="8" id="Ipe-eb-c3K"/>
                                     <constraint firstAttribute="bottom" secondItem="udk-KY-1EN" secondAttribute="bottom" constant="12" id="JAo-Mh-uLB"/>
-                                    <constraint firstItem="Obn-fG-MyT" firstAttribute="leading" secondItem="r4t-Vw-KRC" secondAttribute="leading" constant="12" id="Pc4-as-sK7"/>
+                                    <constraint firstItem="96b-KV-nUq" firstAttribute="top" secondItem="r4t-Vw-KRC" secondAttribute="top" constant="7" id="QAm-ys-MY6"/>
                                     <constraint firstAttribute="bottom" secondItem="REK-VW-mMN" secondAttribute="bottom" constant="12" id="pms-Zb-esY"/>
-                                    <constraint firstAttribute="bottom" secondItem="Obn-fG-MyT" secondAttribute="bottom" constant="12" id="vhT-DX-2tU"/>
                                     <constraint firstItem="REK-VW-mMN" firstAttribute="trailing" secondItem="r4t-Vw-KRC" secondAttribute="trailingMargin" id="wmX-W9-bJx"/>
                                     <constraint firstItem="udk-KY-1EN" firstAttribute="centerX" secondItem="r4t-Vw-KRC" secondAttribute="centerX" id="y5N-dQ-lq6"/>
                                 </constraints>
@@ -261,6 +258,9 @@
                                                     <constraint firstAttribute="height" constant="30" id="9gc-2U-WWU"/>
                                                 </constraints>
                                                 <state key="normal" image="send"/>
+                                                <connections>
+                                                    <action selector="postButtonTapped:" destination="Q3H-lK-yR0" eventType="touchUpInside" id="Z1U-62-KS4"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -444,13 +444,15 @@
                     </view>
                     <connections>
                         <outlet property="cameraButton" destination="ChF-ra-KE5" id="GFs-K6-HhO"/>
+                        <outlet property="captionField" destination="7ur-kt-Fsn" id="zRb-zS-z3H"/>
                         <outlet property="feedView" destination="6Ic-As-vMV" id="ch2-Rj-9vN"/>
+                        <outlet property="selectedImage" destination="96b-KV-nUq" id="M6p-bd-k9b"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="qdQ-7f-FYP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HvK-GG-ZPq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1245.5999999999999" y="82.3088455772114"/>
+            <point key="canvasLocation" x="1304.8" y="119.1904047976012"/>
         </scene>
     </scenes>
     <resources>
@@ -460,7 +462,6 @@
         <image name="photo" width="128" height="128"/>
         <image name="post_pic" width="960" height="960"/>
         <image name="profile_pic" width="960" height="960"/>
-        <image name="reload" width="128" height="128"/>
         <image name="send" width="128" height="128"/>
     </resources>
 </document>

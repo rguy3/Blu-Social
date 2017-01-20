@@ -8,6 +8,7 @@
 
 import Foundation
 import Firebase
+import FirebaseStorage
 import FirebaseDatabase
 
 let BASE_URL = FIRDatabase.database().reference()
@@ -48,7 +49,7 @@ class DataService {
         return _REF_STORAGE_BASE
     }
     
-    var REF_STORAGE_POSTS: FIRStorageReference {
+    var REF_STORAGE_IMAGES: FIRStorageReference {
         return _REF_STORAGE_IMAGES
     }
     
